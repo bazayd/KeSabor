@@ -4,55 +4,31 @@ function Footer() {
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="https://kesabor.com/" class="flex items-center">
               <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                class="h-7 me-3"
-                alt="FlowBite Logo"
+                src="/main_logo.png"
+                alt="KeSabor logo"
+                className="mr-2 h-12 w-12 rounded-full object-cover"
               />
               <span class="text-heading self-center text-2xl font-semibold whitespace-nowrap">
                 Ke Sabor
               </span>
             </a>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-">
-            
+          <div class="grid grid-cols-1 gap-10 sm:gap-8 sm:grid-cols-2">
             <div>
               <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
-                Follow us
+                About
               </h2>
               <ul class="text-body font-medium">
                 <li class="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    class="hover:underline "
-                  >
-                    Github
+                  <a href="/about-us" class="hover:underline">
+                    About Us 
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    class="hover:underline"
-                  >
-                    Discord
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
-                Legal
-              </h2>
-              <ul class="text-body font-medium">
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="hover:underline">
-                    Terms &amp; Conditions
+                  <a href="/contact-us" class="hover:underline">
+                    Contact Us
                   </a>
                 </li>
               </ul>

@@ -2,24 +2,34 @@ import { useEffect, useState } from 'react'
 
 const slides = [
   {
-    image: 'https://placehold.co/1200x600/f97316/ffffff?text=Food+Photo+1',
+    image: '/catering_09.PNG',
     alt: 'Catering food',
+    title: 'Fresh Food for Your Event',
+    description: 'Prepared with care by our family.',
   },
   {
-    image: 'https://placehold.co/1200x600/ea580c/ffffff?text=Food+Photo+2',
+    image: '/catering_07.PNG',
     alt: 'Prepared catering food',
+    title: 'Authentic Catering',
+    description: 'Delicious food made for memorable occasions.',
   },
   {
-    image: 'https://placehold.co/1200x600/c2410c/ffffff?text=Catering+Setup',
+    image: '/catering_08.PNG',
     alt: 'Catering setup',
+    title: 'Ready to Serve',
+    description: 'We help make your event special.',
   },
   {
-    image: 'https://placehold.co/1200x600/9a3412/ffffff?text=Family+Owned',
+    image: '/catering_04.PNG',
     alt: 'Family-owned catering service',
+    title: 'Family-Owned Catering',
+    description: 'Serving the Bay Area and surrounding communities.',
   },
   {
-    image: 'https://placehold.co/1200x600/7c2d12/ffffff?text=KeSabor+Catering',
+    image: '/catering_06.PNG',
     alt: 'KeSabor catering',
+    title: 'Build Your Perfect Menu',
+    description: 'Choose your proteins, sides, sauces, and drinks.',
   },
 ]
 
@@ -51,7 +61,7 @@ function Carousel() {
   return (
     <section className="relative w-full">
       {/* Carousel images */}
-      <div className="relative h-56 overflow-hidden md:h-96">
+      <div className="relative h-[340px] overflow-hidden md:h-[520px]">
         <div
           className="flex h-full transition-transform duration-700 ease-in-out"
           style={{
@@ -59,12 +69,31 @@ function Carousel() {
           }}
         >
           {slides.map((slide) => (
-            <div key={slide.image} className="h-full min-w-full">
+            <div
+              key={slide.image}
+              className="relative h-full min-w-full"
+            >
               <img
                 src={slide.image}
                 alt={slide.alt}
                 className="block h-full w-full object-cover"
               />
+
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/45" />
+
+              {/* Text overlay */}
+              <div className="absolute inset-0 flex items-center justify-center px-6 text-center text-white">
+                <div className="max-w-3xl">
+                  <h2 className="text-4xl font-bold drop-shadow-lg md:text-6xl">
+                    {slide.title}
+                  </h2>
+
+                  <p className="mt-4 text-lg drop-shadow-md md:text-2xl">
+                    {slide.description}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -93,8 +122,8 @@ function Carousel() {
         className="group absolute left-0 top-0 z-30 flex h-full items-center justify-center px-4 focus:outline-none"
         aria-label="Previous slide"
       >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 text-white hover:bg-white/50">
-          <span className="text-2xl">‹</span>
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 text-3xl text-white hover:bg-black/60">
+          ‹
         </span>
       </button>
 
@@ -105,8 +134,8 @@ function Carousel() {
         className="group absolute right-0 top-0 z-30 flex h-full items-center justify-center px-4 focus:outline-none"
         aria-label="Next slide"
       >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/30 text-white hover:bg-white/50">
-          <span className="text-2xl">›</span>
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 text-3xl text-white hover:bg-black/60">
+          ›
         </span>
       </button>
     </section>
