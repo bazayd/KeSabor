@@ -27,18 +27,22 @@ function Navbar() {
       </div>
       <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
-          <a
-            href="/menu"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black-200  hover:text-gray-400 mr-4"
-          >
-            Menu & Pricing
-          </a>
-          <a
-            href="/order-form"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-gray-400 mr-4"
-          >
-            Order Form
-          </a>
+          <Link to="/menu">
+            <a
+              href="/menu"
+              class="block mt-4 lg:inline-block lg:mt-0 text-black-200  hover:text-gray-400 mr-4"
+            >
+              Menu & Pricing
+            </a>
+          </Link>
+          <Link to="/order-form">
+            <a
+              href="/order-form"
+              class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-gray-400 mr-4"
+            >
+              Order Form
+            </a>
+          </Link>
           <Link to="/about-us">
             <a
               href="#responsive-header"
@@ -50,12 +54,12 @@ function Navbar() {
         </div>
         <div>
           <Link to="/contact-us">
-          <a
-            href="#"
-            class="inline-block text-sm px-4 py-2 leading-none border rounded text-black-200 border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
-          >
-            Contact Us
-          </a>
+            <a
+              href="#"
+              class="inline-block text-sm px-4 py-2 leading-none border rounded text-black-200 border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
+            >
+              Contact Us
+            </a>
           </Link>
         </div>
       </div>
