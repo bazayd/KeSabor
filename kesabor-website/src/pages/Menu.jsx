@@ -1,116 +1,116 @@
-import { useState } from 'react'
-import MenuModal from '../components/MenuModal'
+import { useState } from "react";
+import MenuModal from "../components/MenuModal";
 
 const menuCategories = [
   {
-    name: 'Proteins',
-    description: 'Choose three meats for your taquiza.',
-    image: 'https://placehold.co/800x500/7f1d1d/ffffff?text=Proteins',
+    name: "Proteins",
+    description: "Choose three meats for your taquiza.",
+    image: "https://placehold.co/800x500/7f1d1d/ffffff?text=Proteins",
     options: [
-      'Carne Asada',
-      'Al Pastor',
-      'Chorizo',
-      'Pollo',
-      'Carnitas',
-      'Birria',
-      'Barbacoa',
-      'Lengua',
-      'Cabeza',
-      'Suadero',
+      "Carne Asada",
+      "Al Pastor",
+      "Chorizo",
+      "Pollo",
+      "Carnitas",
+      "Birria",
+      "Barbacoa",
+      "Lengua",
+      "Cabeza",
+      "Suadero",
     ],
   },
   {
-    name: 'Accompaniments',
-    description: 'Choose sides to complete your meal.',
-    image: 'https://placehold.co/800x500/92400e/ffffff?text=Accompaniments',
+    name: "Accompaniments",
+    description: "Choose sides to complete your meal.",
+    image: "https://placehold.co/800x500/92400e/ffffff?text=Accompaniments",
     options: [
-      'Rice',
-      'Beans',
-      'Pasta',
-      'Salad',
-      'Chips and Salsa Botanera',
-      'Quesadillas',
-      'Sopes',
-      'Tortas',
-      'Hotdogs',
+      "Rice",
+      "Beans",
+      "Pasta",
+      "Salad",
+      "Chips and Salsa Botanera",
+      "Quesadillas",
+      "Sopes",
+      "Tortas",
+      "Hotdogs",
     ],
   },
   {
-    name: 'Sauces',
-    description: 'Choose three sauces or toppings.',
-    image: 'https://placehold.co/800x500/9a3412/ffffff?text=Sauces',
+    name: "Sauces",
+    description: "Choose three sauces or toppings.",
+    image: "https://placehold.co/800x500/9a3412/ffffff?text=Sauces",
     options: [
-      'Green Sauce',
-      'Red Sauce',
-      'Habanero Sauce',
-      'Habanero Pineapple Sauce',
-      'Orange Sauce',
-      'Molcajete Sauce',
-      'Guacamole',
-      'Pico de Gallo',
+      "Green Sauce",
+      "Red Sauce",
+      "Habanero Sauce",
+      "Habanero Pineapple Sauce",
+      "Orange Sauce",
+      "Molcajete Sauce",
+      "Guacamole",
+      "Pico de Gallo",
     ],
   },
   {
-    name: 'Aguas Frescas',
-    description: 'Choose two refreshing drinks.',
-    image: 'https://placehold.co/800x500/166534/ffffff?text=Aguas+Frescas',
+    name: "Aguas Frescas",
+    description: "Choose two refreshing drinks.",
+    image: "https://placehold.co/800x500/166534/ffffff?text=Aguas+Frescas",
     options: [
-      'Lemon',
-      'Hibiscus',
-      'Horchata',
-      'Tamarind',
-      'Melon',
-      'Guava',
-      'Papaya',
-      'Watermelon',
-      'Strawberry',
-      'Mango',
-      'Pineapple',
-      'Mixed Fruits',
-      'Coffee',
-      'Coco',
-      'Pina Colada',
-      'Orange',
+      "Lemon",
+      "Hibiscus",
+      "Horchata",
+      "Tamarind",
+      "Melon",
+      "Guava",
+      "Papaya",
+      "Watermelon",
+      "Strawberry",
+      "Mango",
+      "Pineapple",
+      "Mixed Fruits",
+      "Coffee",
+      "Coco",
+      "Pina Colada",
+      "Orange",
     ],
   },
   {
-    name: 'Condiments',
-    description: 'Choose four fresh toppings.',
-    image: 'https://placehold.co/800x500/365314/ffffff?text=Condiments',
+    name: "Condiments",
+    description: "Choose four fresh toppings.",
+    image: "https://placehold.co/800x500/365314/ffffff?text=Condiments",
     options: [
-      'Onion',
-      'Cilantro',
-      'Lemons',
-      'Cucumbers',
-      'Radishes',
-      'Caramelized Onions and Jalapenos',
-      'Manzano Chili Tanning',
-      'Nopales Salad',
+      "Onion",
+      "Cilantro",
+      "Lemons",
+      "Cucumbers",
+      "Radishes",
+      "Caramelized Onions and Jalapenos",
+      "Manzano Chili Tanning",
+      "Nopales Salad",
     ],
   },
-]
+];
 
 function Menu() {
-  const [activeCategory, setActiveCategory] = useState(null)
+  const [activeCategory, setActiveCategory] = useState(null);
 
   return (
     <main className="min-h-screen bg-stone-100">
       {/* Menu banner */}
       <section className="relative flex min-h-[320px] items-center justify-center overflow-hidden bg-neutral-950 px-6 py-20 text-center text-white">
-        {/* <div className="absolute inset-0 bg-[url('https://placehold.co/1600x700/292524/ffffff?text=KeSabor+Catering')] bg-cover bg-center opacity-40" /> */}
-
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{ backgroundImage: "url('/catering_10.png')" }}
+        />
         <div className="relative z-10">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-orange-300">
             KeSabor Catering
           </p>
 
-          <h1 className="text-5xl font-bold md:text-7xl">
-            Our Menu
-          </h1>
+          <h1 className="text-5xl font-bold md:text-7xl">Our Menu</h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-200">
-            Build your perfect taquiza with delicious proteins, sides,
-            sauces, drinks, and fresh toppings.
+            Build your perfect taquiza with delicious proteins, sides, sauces,
+            drinks, and fresh toppings.
           </p>
         </div>
       </section>
@@ -127,8 +127,8 @@ function Menu() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-neutral-600">
-            Includes selected proteins, aguas frescas, accompaniments,
-            sauces, condiments, two hours of service, and disposable tableware.
+            Includes selected proteins, aguas frescas, accompaniments, sauces,
+            condiments, two hours of service, and disposable tableware.
           </p>
 
           <a
@@ -171,9 +171,7 @@ function Menu() {
                   {category.name}
                 </h3>
 
-                <p className="mt-2 text-neutral-600">
-                  {category.description}
-                </p>
+                <p className="mt-2 text-neutral-600">{category.description}</p>
 
                 <span className="mt-4 inline-block font-semibold text-red-800">
                   View options →
@@ -192,7 +190,7 @@ function Menu() {
         />
       )}
     </main>
-  )
+  );
 }
 
-export default Menu
+export default Menu;
