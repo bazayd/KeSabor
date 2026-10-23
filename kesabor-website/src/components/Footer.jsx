@@ -13,8 +13,10 @@ function Footer() {
               <span class="text-heading self-center text-2xl font-semibold whitespace-nowrap">
                 Ke Sabor
               </span>
+              
             </a>
           </div>
+          
           <div class="grid grid-cols-1 gap-10 sm:gap-8 sm:grid-cols-2">
             <div>
               <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
@@ -23,7 +25,7 @@ function Footer() {
               <ul class="text-body font-medium">
                 <li class="mb-4">
                   <a href="/about-us" class="hover:underline">
-                    About Us 
+                    About Us
                   </a>
                 </li>
                 <li>

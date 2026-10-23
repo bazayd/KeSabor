@@ -41,7 +41,7 @@ function Carousel() {
       setCurrentSlide((previousSlide) =>
         previousSlide === slides.length - 1 ? 0 : previousSlide + 1,
       )
-    }, 5000)
+    }, 8000)
 
     return () => clearInterval(interval)
   }, [])
